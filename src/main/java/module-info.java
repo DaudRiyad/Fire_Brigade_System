@@ -1,0 +1,8 @@
+module com.example.fire_brigade_system {
+    requires javafx.controls;
+    requires javafx.fxml;
+
+
+    opens com.example.fire_brigade_system to javafx.fxml;
+    exports com.example.fire_brigade_system;
+}
