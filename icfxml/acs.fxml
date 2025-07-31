@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade.IncidentCommander.AssessIncidentSeverity">
+   <children>
+      <Label layoutX="168.0" layoutY="14.0" prefHeight="27.0" prefWidth="231.0" text="Assess Incident Severity">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="severtyComboBox" layoutX="117.0" layoutY="166.0" prefWidth="150.0" />
+      <Label layoutX="15.0" layoutY="170.0" text="severity level" />
+      <Label layoutX="14.0" layoutY="99.0" text="Select an incident" />
+      <Label fx:id="updatemessageOutLabel" layoutX="325.0" layoutY="313.0" prefHeight="112.0" prefWidth="276.0" text="Label" />
+      <TableView fx:id="incidentViewCol" layoutX="4.0" layoutY="235.0" prefHeight="191.0" prefWidth="321.0">
+        <columns>
+          <TableColumn fx:id="incidentIDcol" prefWidth="100.0" text="Incident ID " />
+          <TableColumn fx:id="typeCol" prefWidth="112.0" text="Type" />
+            <TableColumn fx:id="locationCol" prefWidth="105.0" text="Location" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="incidentComboBox" layoutX="117.0" layoutY="95.0" onAction="#incidentComboBoxOA" prefWidth="150.0" />
+      <Label layoutX="11.0" layoutY="197.0" prefHeight="17.0" prefWidth="75.0" text="Location" />
+      <Label fx:id="locationLable" layoutX="115.0" layoutY="196.0" prefHeight="27.0" prefWidth="150.0" text="Label" />
+      <Label layoutX="14.0" layoutY="138.0" prefHeight="17.0" prefWidth="68.0" text="Type : " />
+      <Label fx:id="typeLable" layoutX="117.0" layoutY="133.0" prefHeight="27.0" prefWidth="150.0" text="Label" />
+   </children>
+</AnchorPane>
