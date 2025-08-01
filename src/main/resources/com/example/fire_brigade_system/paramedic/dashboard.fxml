@@ -1,14 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.fire_brigade_system.paramedic.Dashboard"
-            prefHeight="400.0" prefWidth="600.0">
+<BorderPane xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.fire_brigade_system.Controllers.ParamedicController"
+            style="-fx-background-color: #f0f2f5;">
 
-</AnchorPane>
+    <!-- Top Header -->
+    <top>
+        <HBox style="-fx-background-color: #1565c0; -fx-padding: 15; -fx-alignment: CENTER_LEFT;">
+            <ImageView fitWidth="40" fitHeight="40">
+<!--                <Image url="@/assets/paramedic_icon.png"/>-->
+            </ImageView>
+            <Label text="Paramedic Dashboard" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 0 0 0 10;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Label text="Unit 7A" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                <Button text="Sign Out" style="-fx-background-color: #2196f3; -fx-text-fill: white; -fx-font-weight: bold;"
+                        onAction="#handleSignOut"/>
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- Center Content -->
+    <center>
+        <SplitPane dividerPositions="0.3">
+            <!-- Left: Patient Management Panel -->
+            <VBox style="-fx-padding: 15; -fx-spacing: 15;">
+                <Label text="Patient Management" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1565c0;"/>
+
+                <Button text="View Assigned Patients" style="-fx-background-color: #2e7d32; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleViewPatients" maxWidth="Infinity"/>
+                <Button text="Update Patient Status" style="-fx-background-color: #388e3c; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleUpdateStatus" maxWidth="Infinity"/>
+                <Button text="Request Medical Supplies" style="-fx-background-color: #43a047; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleRequestSupplies" maxWidth="Infinity"/>
+                <Button text="Upload Medical Report" style="-fx-background-color: #4caf50; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleUploadReport" maxWidth="Infinity"/>
+                <Button text="Request Physician Consult" style="-fx-background-color: #66bb6a; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleRequestConsult" maxWidth="Infinity"/>
+
+                <Separator style="-fx-padding: 10 0;"/>
+
+                <Label text="Emergency Response" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1565c0;"/>
+                <Button text="Navigate to Incident" style="-fx-background-color: #d32f2f; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleNavigate" maxWidth="Infinity"/>
+                <Button text="Report On Scene" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleReportOnScene" maxWidth="Infinity"/>
+                <Button text="Request Backup" style="-fx-background-color: #ef5350; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleRequestBackup" maxWidth="Infinity"/>
+            </VBox>
+
+            <!-- Right: Active Incidents & Patient Info Panel -->
+            <VBox style="-fx-padding: 15; -fx-spacing: 10;">
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label text="Assigned Incidents" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+                    <Button text="Refresh" onAction="#refreshIncidents"/>
+                </HBox>
+
+                <TableView style="-fx-background-color: white;">
+                    <columns>
+                        <TableColumn text="ID" prefWidth="60" sortable="true"/>
+                        <TableColumn text="Location" prefWidth="150" sortable="true"/>
+                        <TableColumn text="Severity" prefWidth="100" sortable="true"/>
+                        <TableColumn text="Status" prefWidth="120" sortable="true"/>
+                        <TableColumn text="ETA" prefWidth="80" sortable="true"/>
+                        <TableColumn text="Actions" prefWidth="120"/>
+                    </columns>
+                </TableView>
+
+                <!-- Patient Information Panel -->
+                <VBox style="-fx-padding: 15; -fx-background-color: #e3f2fd; -fx-border-color: #bbdefb; -fx-border-radius: 5; -fx-spacing: 10;">
+                    <Label text="Patient Information" style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+
+                    <GridPane hgap="10" vgap="10">
+                        <Label text="Patient ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <Label fx:id="patientIdLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <Label fx:id="patientNameLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <Label text="Age:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <Label fx:id="patientAgeLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                        <Label text="Condition:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <Label fx:id="patientConditionLabel" style="-fx-font-weight: bold; -fx-text-fill: #d32f2f;" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                        <Label text="Vital Signs:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                        <Label fx:id="vitalSignsLabel" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                        <Label text="Last Update:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                        <Label fx:id="lastUpdateLabel" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                    </GridPane>
+
+                    <HBox spacing="10" style="-fx-padding: 10 0 0 0;">
+                        <Button text="Update Vitals" style="-fx-background-color: #43a047; -fx-text-fill: white;"/>
+                        <Button text="Medication Administered" style="-fx-background-color: #1976d2; -fx-text-fill: white;"/>
+                        <Button text="Transport to Hospital" style="-fx-background-color: #d32f2f; -fx-text-fill: white;"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </SplitPane>
+    </center>
+
+    <!-- Bottom Status Bar -->
+    <bottom>
+        <HBox style="-fx-background-color: #e0e0e0; -fx-padding: 5 15; -fx-alignment: CENTER_LEFT;">
+            <Label text="Status:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="systemStatusLabel" text="Available for response" style="-fx-padding: 0 0 0 5;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="Current Location:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="locationLabel" text="Station 7" style="-fx-padding: 0 10 0 5;"/>
+            <Label fx:id="timeLabel" text="2023-10-15 14:30:45"/>
+        </HBox>
+    </bottom>
+</BorderPane>

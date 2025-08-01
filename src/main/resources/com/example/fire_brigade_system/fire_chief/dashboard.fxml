@@ -1,14 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.fire_brigade_system.fire_chief.Dashboard"
-            prefHeight="400.0" prefWidth="600.0">
+<BorderPane xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.fire_brigade_system.Controllers.FireChiefController"
+            style="-fx-background-color: #f0f2f5;">
 
-</AnchorPane>
+    <!-- Top Header -->
+    <top>
+        <HBox style="-fx-background-color: #c62828; -fx-padding: 15;">
+            <ImageView fitWidth="40" fitHeight="40">
+<!--                <Image url="@/assets/fire_chief_icon.png"/>-->
+            </ImageView>
+            <Label text="Fire Chief Dashboard" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 0 0 0 10;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Sign Out" style="-fx-background-color: #ff5252; -fx-text-fill: white; -fx-font-weight: bold;"
+                    onAction="#handleSignOut"/>
+        </HBox>
+    </top>
+
+    <!-- Center Content -->
+    <center>
+        <SplitPane dividerPositions="0.3">
+            <!-- Left: Incident Management Panel -->
+            <VBox style="-fx-padding: 15; -fx-spacing: 15;">
+                <Label text="Incident Management" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #c62828;"/>
+
+                <Button text="Evaluate New Incidents" style="-fx-background-color: #3949ab; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleEvaluateIncidents" maxWidth="Infinity"/>
+                <Button text="Plan Response Strategy" style="-fx-background-color: #5e35b1; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handlePlanResponse" maxWidth="Infinity"/>
+                <Button text="Approve Paramedics" style="-fx-background-color: #7e57c2; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleApproveParamedics" maxWidth="Infinity"/>
+                <Button text="Change Priority" style="-fx-background-color: #6a1b9a; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleChangePriority" maxWidth="Infinity"/>
+                <Button text="Request Mutual Aid" style="-fx-background-color: #4527a0; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleRequestAid" maxWidth="Infinity"/>
+                <Button text="Send Orders to Dispatcher" style="-fx-background-color: #283593; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleSendOrders" maxWidth="Infinity"/>
+
+                <Separator style="-fx-padding: 10 0;"/>
+
+                <Label text="System Tools" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #c62828;"/>
+                <Button text="Review Incident Logs" style="-fx-background-color: #2e7d32; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleReviewLogs" maxWidth="Infinity"/>
+                <Button text="Archive Completed Cases" style="-fx-background-color: #1b5e20; -fx-text-fill: white; -fx-font-size: 14px;"
+                        onAction="#handleArchiveCases" maxWidth="Infinity"/>
+            </VBox>
+
+            <!-- Right: Active Incidents Panel -->
+            <VBox style="-fx-padding: 15; -fx-spacing: 10;">
+                <HBox alignment="CENTER_LEFT" spacing="10">
+                    <Label text="Active Incidents" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+                    <Button text="Refresh" onAction="#refreshIncidents"/>
+                </HBox>
+
+                <TableView style="-fx-background-color: white;">
+                    <columns>
+                        <TableColumn text="ID" prefWidth="60" sortable="true"/>
+                        <TableColumn text="Location" prefWidth="150" sortable="true"/>
+                        <!-- Fixed Severity column - removed invalid styleFunction -->
+                        <TableColumn text="Severity" prefWidth="100" sortable="true"/>
+                        <TableColumn text="Status" prefWidth="120" sortable="true"/>
+                        <TableColumn text="Priority" prefWidth="100" sortable="true"/>
+                        <TableColumn text="ETA" prefWidth="80" sortable="true"/>
+                        <!-- Fixed Actions column - simplified cell structure -->
+                        <TableColumn text="Actions" prefWidth="120"/>
+                    </columns>
+                </TableView>
+
+                <!-- Incident Details Panel -->
+                <VBox style="-fx-padding: 15; -fx-background-color: #e3f2fd; -fx-border-color: #bbdefb; -fx-border-radius: 5;">
+                    <Label text="Selected Incident Details" style="-fx-font-weight: bold;"/>
+                    <GridPane hgap="10" vgap="10">
+                        <Label text="Incident ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <Label fx:id="incidentIdLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Location:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <Label fx:id="locationLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <Label text="Reported At:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <Label fx:id="timeLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                        <Label text="Current Status:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <Label fx:id="statusLabel" style="-fx-font-weight: bold;" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                        <Label text="Assigned Units:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                        <Label fx:id="unitsLabel" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+                    </GridPane>
+                </VBox>
+            </VBox>
+        </SplitPane>
+    </center>
+
+    <!-- Bottom Status Bar -->
+    <bottom>
+        <HBox style="-fx-background-color: #e0e0e0; -fx-padding: 5 15;">
+            <Label text="Status:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="systemStatusLabel" text="All systems operational" style="-fx-padding: 0 0 0 5;"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="reportedTimeLabel" text="2023-10-15 14:30:45"/>
+        </HBox>
+    </bottom>
+</BorderPane>
