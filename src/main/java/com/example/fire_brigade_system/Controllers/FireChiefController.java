@@ -28,6 +28,7 @@ public class FireChiefController {
 
     @FXML
     void handleApproveParamedics(ActionEvent event) {
+        System.out.println("Hello");
 
     }
 
