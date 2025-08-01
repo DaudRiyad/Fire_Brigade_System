@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade.IncidentCommander.ApproveIncidentClosure">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade.IncidentCommander.ApproveIncidentClosureController">
    <children>
-      <Label layoutX="227.0" layoutY="31.0" text="Label" />
+      <Label layoutX="188.0" layoutY="14.0" text=" Approve Incident Closure ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="40.0" layoutY="49.0" text="Incident Summary: " />
+      <Label layoutX="40.0" layoutY="183.0" text="Safety Checklist Complete" />
+      <Label layoutX="40.0" layoutY="221.0" text="All Teams Cleared " />
+      <Label layoutX="40.0" layoutY="255.0" text="Final Remarks: " />
+      <TextArea layoutX="37.0" layoutY="280.0" prefHeight="106.0" prefWidth="302.0" />
+      <TextArea layoutX="37.0" layoutY="66.0" prefHeight="106.0" prefWidth="302.0" />
+      <CheckBox layoutX="196.0" layoutY="183.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox layoutX="277.0" layoutY="183.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox layoutX="366.0" layoutY="183.0" mnemonicParsing="false" text="CheckBox" />
+      <CheckBox layoutX="168.0" layoutY="221.0" mnemonicParsing="false" text="No " />
+      <CheckBox layoutX="233.0" layoutY="221.0" mnemonicParsing="false" text="Yes" />
    </children>
 </AnchorPane>

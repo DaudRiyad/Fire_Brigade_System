@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane fx:id="fireInspectorDashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade.FireInspector.FireInspectorDashboardController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox prefWidth="200.0" style="-fx-background-color: rgba(100,100,100,22);" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#inspectFireSceneOnAction" prefWidth="200.0" text="Inspect Fire Scene " />
+            <Button mnemonicParsing="false" onAction="#iFireCodeViolationOnAction" prefWidth="200.0" text="Identify Fire Code Violations" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#interviewWithnessOnAction" prefWidth="200.0" text="Interview Witnesses" />
+            <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#sFinalInvestigationReportOnAction" prefWidth="200.0" text="Submit Final Investigation Report" />
+            <Button layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#safetyImprovementsOnAction" prefWidth="200.0" text="Safety Improvements" />
+            <Button layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#followUpIbspectionOnAction" prefWidth="200.0" text="Follow-Up Inspections" />
+            <Button layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#trainSstaffOnAction" prefWidth="200.0" text="Train Staff" />
+            <Button layoutX="10.0" layoutY="135.0" mnemonicParsing="false" onAction="#closedInvestigationOnAction" prefWidth="200.0" text="Closed Investigations" />
+            <Button mnemonicParsing="false" onAction="#logOutOnAction" prefWidth="200.0" text="Log Out" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="229.0" layoutY="14.0" prefHeight="27.0" prefWidth="143.0" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="fIInfoTextArea" layoutX="89.0" layoutY="112.0" prefHeight="237.0" prefWidth="424.0" wrapText="true" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
