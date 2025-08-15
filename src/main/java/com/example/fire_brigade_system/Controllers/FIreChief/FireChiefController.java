@@ -1,4 +1,4 @@
-package com.example.fire_brigade_system.Controllers;
+package com.example.fire_brigade_system.Controllers.FIreChief;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

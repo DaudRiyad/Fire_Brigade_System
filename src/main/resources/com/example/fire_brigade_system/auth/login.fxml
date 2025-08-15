@@ -1,47 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #f5f7fa; -fx-padding: 40;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade_system.Auth.Login">
-   <children>
-      <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Fire Brigade Operations" />
-      <Label style="-fx-text-fill: #666;" text="Emergency Response System" />
-      <GridPane hgap="10" style="-fx-padding: 20; -fx-background-color: white;               -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 5, 0, 0);" vgap="15">
-         <children>
-            <Label text="User ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-            <TextField fx:id="userIdField" promptText="6-digit ID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-            <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <HBox alignment="CENTER_RIGHT" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <children>
-                  <Button fx:id="loginButton" onAction="#handleLogin" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;" text="Login" />
-               </children>
-            </HBox>
-         </children>
-         <columnConstraints>
-            <ColumnConstraints />
-            <ColumnConstraints />
-         </columnConstraints>
-         <rowConstraints>
-            <RowConstraints />
-            <RowConstraints />
-            <RowConstraints />
-         </rowConstraints>
-      </GridPane>
-      <HBox alignment="CENTER" spacing="20">
-         <children>
-            <Button fx:id="forgotPasswordButton" onAction="#showForgotPassword" style="-fx-text-fill: #3498db; -fx-background-color: transparent;" text="Forgot Password?" />
-            <Button fx:id="signUpButton" onAction="#showSignUp" style="-fx-text-fill: #2ecc71; -fx-background-color: transparent;" text="Sign Up" />
-         </children>
-      </HBox>
-      <Label fx:id="statusLabel" style="-fx-text-fill: #e74c3c;" />
-   </children>
-</VBox>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fire_brigade_system.Auth.LoginController"
+            prefWidth="300" prefHeight="300">
+
+   <Label layoutX="95" layoutY="20" text="Fire Brigade" style="-fx-font-size:18px;"/>
+
+   <TextField fx:id="userIdField" layoutX="50" layoutY="60" promptText="User ID (6 digits)" prefWidth="200"/>
+   <PasswordField fx:id="passwordField" layoutX="50" layoutY="100" promptText="Password (min 6 chars)" prefWidth="200"/>
+   <Label fx:id="messageLabel" layoutX="50" layoutY="135" textFill="red" prefWidth="200"/>
+
+   <Button text="Login" layoutX="110" layoutY="165" prefWidth="80" onAction="#handleLogin"/>
+   <Button text="Sign Up" layoutX="50" layoutY="210" prefWidth="80" onAction="#handleSignUp"/>
+   <Button text="Forgot Password?" layoutX="150" layoutY="210" prefWidth="100" onAction="#handleForgotPassword"/>
+</AnchorPane>
