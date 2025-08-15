@@ -6,9 +6,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.fire_brigade_system.fire_chief.MutualAid"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.fire_brigade_system.Controllers.FireChief.MutualAidController" prefWidth="350" prefHeight="180">
+    <children>
+        <Label layoutX="30" layoutY="20" text="Mutual Aid Request"/>
+        <ComboBox fx:id="stationComboBox" layoutX="30" layoutY="50" prefWidth="150" promptText="Fire Station"/>
+        <TextField fx:id="noteField" layoutX="30" layoutY="80" prefWidth="250" promptText="Note"/>
+        <Button layoutX="30" layoutY="120" text="Send Request" onAction="#handleSendRequest"/>
+        <Label fx:id="messageLabel" layoutX="150" layoutY="120"/>
+    </children>
 </AnchorPane>

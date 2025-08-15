@@ -10,7 +10,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         // Make sure this path matches your resource directory
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/fire_brigade_system/auth/login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Fire Brigade System");
         stage.setScene(scene);
         stage.show();
