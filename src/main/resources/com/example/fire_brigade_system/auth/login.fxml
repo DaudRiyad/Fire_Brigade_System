@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.fire_brigade_system.Auth.LoginController"
-            prefWidth="300" prefHeight="300">
+<AnchorPane prefHeight="300" prefWidth="300" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade_system.Auth.LoginController">
 
-   <Label layoutX="95" layoutY="20" text="Fire Brigade" style="-fx-font-size:18px;"/>
+   <Label layoutX="95" layoutY="20" style="-fx-font-size:18px;" text="Fire Brigade" />
 
-   <TextField fx:id="userIdField" layoutX="50" layoutY="60" promptText="User ID (6 digits)" prefWidth="200"/>
-   <PasswordField fx:id="passwordField" layoutX="50" layoutY="100" promptText="Password (min 6 chars)" prefWidth="200"/>
-   <Label fx:id="messageLabel" layoutX="50" layoutY="135" textFill="red" prefWidth="200"/>
+   <TextField fx:id="userIdField" layoutX="50" layoutY="60" prefWidth="200" promptText="User ID (6 digits)" />
+   <PasswordField fx:id="passwordField" layoutX="50" layoutY="100" prefWidth="200" promptText="Password (min 6 chars)" />
+   <Label fx:id="messageLabel" layoutX="50" layoutY="135" prefWidth="200" textFill="red" />
 
-   <Button text="Login" layoutX="110" layoutY="165" prefWidth="80" onAction="#handleLogin"/>
-   <Button text="Sign Up" layoutX="50" layoutY="210" prefWidth="80" onAction="#handleSignUp"/>
-   <Button text="Forgot Password?" layoutX="150" layoutY="210" prefWidth="100" onAction="#handleForgotPassword"/>
+   <Button layoutX="103.0" layoutY="164.0" onAction="#handleLogin" prefWidth="80" text="Login" />
+   <Button layoutX="50" layoutY="210" onAction="#handleSignUp" prefWidth="80" text="Sign Up" />
+   <Button layoutX="150" layoutY="210" onAction="#handleForgotPassword" prefHeight="25.0" prefWidth="106.0" text="Forgot Password" />
+   <ComboBox fx:id="roleComboboxField" layoutX="68.0" layoutY="249.0" prefWidth="150.0" promptText="Select A Role" />
 </AnchorPane>

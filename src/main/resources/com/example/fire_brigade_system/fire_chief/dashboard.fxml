@@ -38,7 +38,7 @@
                         onAction="#handleChangePriority" maxWidth="Infinity"/>
                 <Button text="Request Mutual Aid" style="-fx-background-color: #4527a0; -fx-text-fill: white; -fx-font-size: 14px;"
                         onAction="#handleRequestAid" maxWidth="Infinity"/>
-                <Button text="Send Orders to Dispatcher" style="-fx-background-color: #283593; -fx-text-fill: white; -fx-font-size: 14px;"
+                <Button text="Send Orders to com.example.fire_brigade_system.Controllers.Dispatcher" style="-fx-background-color: #283593; -fx-text-fill: white; -fx-font-size: 14px;"
                         onAction="#handleSendOrders" maxWidth="Infinity"/>
 
                 <Separator style="-fx-padding: 10 0;"/>

@@ -1,4 +1,4 @@
-package com.example.fire_brigade_system;
+package com.example.fire_brigade_system.Controllers.Dispatcher;
 
 public class DispatcherDashboard
 {

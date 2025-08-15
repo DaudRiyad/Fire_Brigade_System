@@ -7,7 +7,7 @@
 <?import javafx.scene.paint.*?>
 
 <BorderPane xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.fire_brigade_system.Controllers.ParamedicController"
+            fx:controller="com.example.fire_brigade_system.Controllers.Paramedic.ParamedicController"
             style="-fx-background-color: #f0f2f5;">
 
     <!-- Top Header -->
@@ -16,7 +16,7 @@
             <ImageView fitWidth="40" fitHeight="40">
 <!--                <Image url="@/assets/paramedic_icon.png"/>-->
             </ImageView>
-            <Label text="Paramedic Dashboard" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 0 0 0 10;"/>
+            <Label text="com.example.fire_brigade_system.Controllers.Paramedic Dashboard" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 0 0 0 10;"/>
             <Region HBox.hgrow="ALWAYS"/>
             <HBox spacing="10" alignment="CENTER_RIGHT">
                 <Label text="Unit 7A" style="-fx-text-fill: white; -fx-font-weight: bold;"/>

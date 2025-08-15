@@ -8,7 +8,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.fire_brigade_system.DispatcherDashboard"
+            fx:controller="com.example.fire_brigade_system.Controllers.Dispatcher.DispatcherDashboard"
             prefHeight="400.0" prefWidth="600.0">
 
 </AnchorPane>

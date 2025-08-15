@@ -1,4 +1,4 @@
-package com.example.fire_brigade_system.Controllers;
+package com.example.fire_brigade_system.Controllers.Paramedic;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
