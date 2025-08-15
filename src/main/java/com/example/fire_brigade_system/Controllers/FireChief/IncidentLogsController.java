@@ -1,5 +1,9 @@
 package com.example.fire_brigade_system.Controllers.FireChief;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+
 public class IncidentLogsController
 {
     @javafx.fxml.FXML
