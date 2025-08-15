@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.DispatcherLoginController">
+    <children>
+        <Label layoutX="20" layoutY="20" text="User ID:" />
+        <TextField fx:id="txtUserId" layoutX="80" layoutY="20" />
+
+        <Label layoutX="20" layoutY="60" text="Password:" />
+        <PasswordField fx:id="txtPassword" layoutX="80" layoutY="60" />
+
+        <Button fx:id="btnLogin" layoutX="80" layoutY="100" text="Login" onAction="#handleLogin"/>
+    </children>
+</AnchorPane>
