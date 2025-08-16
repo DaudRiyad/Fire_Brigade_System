@@ -1,24 +1,43 @@
 package com.example.fire_brigade_system.Controllers.FireChief;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class CommandCenterController
-{
-    @javafx.fxml.FXML
-    private ComboBox priorityComboBox;
-    @javafx.fxml.FXML
+public class CommandCenterController {
+
+    @FXML
+    private ComboBox<String> priorityComboBox;
+
+    @FXML
     private TextField instructionField;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label messageLabel;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        // Initialize priority options — example
+        priorityComboBox.getItems().addAll("Low", "Medium", "High", "Critical");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void handleSendOrder(ActionEvent actionEvent) {
+        String selectedPriority = priorityComboBox.getValue();
+        String instruction = instructionField.getText();
+
+        if (selectedPriority == null || selectedPriority.isBlank()) {
+            messageLabel.setText("Please select a priority level.");
+            return;
+        }
+        if (instruction == null || instruction.isBlank()) {
+            messageLabel.setText("Please enter an instruction.");
+            return;
+        }
+
+        messageLabel.setText("Order sent with priority: " + selectedPriority);
+
     }
 }

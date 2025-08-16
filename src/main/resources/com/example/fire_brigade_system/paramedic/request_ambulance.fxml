@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.fire_brigade_system.paramedic.RequestAmbulance"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fire_brigade_system.Controllers.Paramedic.AmbulanceRequestController"
+            prefWidth="350" prefHeight="160">
 
+    <Label text="Request Additional Ambulance" layoutX="15" layoutY="15" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+
+    <Label wrapText="true" text="Confirm your request for additional ambulance support."
+           layoutX="15" layoutY="50" prefWidth="320" />
+
+    <Button text="Submit Request" layoutX="15" layoutY="95" prefWidth="140" onAction="#handleSubmitRequest" />
+    <Button text="Cancel" layoutX="190" layoutY="95" prefWidth="140" onAction="#handleCancel" />
+
+    <Label fx:id="statusMessage" layoutX="15" layoutY="130" prefWidth="320" textFill="red" wrapText="true" />
 </AnchorPane>

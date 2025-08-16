@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fire_brigade_system.Controllers.Paramedic.TriageTransportController"
+            prefWidth="450" prefHeight="350">
+
+    <Label text="Triage and Transport" layoutX="15" layoutY="15" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+
+    <Label text="Select Patient:" layoutX="15" layoutY="50" />
+    <ComboBox fx:id="patientComboBox" layoutX="140" layoutY="45" prefWidth="250" />
+
+    <Label text="Triage Level:" layoutX="15" layoutY="90" />
+    <ComboBox fx:id="triageLevelComboBox" layoutX="140" layoutY="85" prefWidth="120">
+    </ComboBox>
+
+    <Button text="Save Triage Info" layoutX="140" layoutY="125" prefWidth="180" onAction="#handleSaveTriage" />
+
+    <Label text="Transport Critical Patient" layoutX="15" layoutY="170" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+
+    <Label text="Destination Hospital:" layoutX="15" layoutY="210" />
+    <TextField fx:id="hospitalField" layoutX="140" layoutY="205" prefWidth="250" />
+
+    <Label text="Estimated Arrival Time:" layoutX="15" layoutY="250" />
+    <TextField fx:id="etaField" layoutX="140" layoutY="245" prefWidth="150" promptText="HH:mm" />
+
+    <Button text="Confirm Transport" layoutX="140" layoutY="290" prefWidth="180" onAction="#handleConfirmTransport" />
+
+    <Label fx:id="statusMessage" layoutX="15" layoutY="320" prefWidth="425" textFill="red" wrapText="true" />
+</AnchorPane>

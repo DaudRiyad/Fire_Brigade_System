@@ -1,5 +1,6 @@
 package com.example.fire_brigade_system.Auth;
 
+import com.example.fire_brigade_system.utils.SceneUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -44,38 +45,31 @@ public class signupController {
         String confirmPassword = confirmPasswordField.getText();
         String phone = phoneField.getText();
 
-        // BEGINNER-LEVEL: Step-by-step validation
 
-        // Check all fields filled
         if (userId.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() || phone.isEmpty()) {
             messageLabel.setText("Please fill all fields!");
             return;
         }
 
-        // Check user ID is 6 digits
+
         if (!userId.matches("\\d{6}")) {
             messageLabel.setText("User ID must be 6 digits!");
             return;
         }
 
-        // Check password at least 6 chars
         if (password.length() < 6) {
             messageLabel.setText("Password must be at least 6 characters!");
             return;
         }
 
-        // Check passwords match
         if (!password.equals(confirmPassword)) {
             messageLabel.setText("Passwords do not match!");
             return;
         }
 
-        // For phone number, you can check length or numeric if you want (optional)
 
-        // Imagine we save the new user here... (not implemented)
-        messageLabel.setText("Registration successful! Returning to login...");
+        messageLabel.setText("Registration successful! Returning to login.");
 
-        // Wait a second, then go to login screen
         new Thread(() -> {
             try {
                 Thread.sleep(1000); // 1 second pause
@@ -91,16 +85,12 @@ public class signupController {
         goToLogin(actionEvent);
     }
 
-    // Helper method to load login.fxml
     private void goToLogin(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/example/fire_brigade_system/auth/login.fxml"));
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
+            SceneUtil.switchScene(actionEvent, "/com/example/fire_brigade_system/Auth/login.fxml");
         } catch (Exception e) {
-            messageLabel.setText("Can't load login page.");
             e.printStackTrace();
+            messageLabel.setText("Can't load forgot password page.");
         }
     }
 }

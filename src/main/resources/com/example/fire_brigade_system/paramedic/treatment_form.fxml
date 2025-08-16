@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.fire_brigade_system.paramedic.TreatmentForm"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fire_brigade_system.Controllers.Paramedic.TreatmentController"
+            prefWidth="450" prefHeight="300">
 
+    <Label text="Treatment and Casualty Report" layoutX="15" layoutY="15" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+
+    <Label text="Number of Victims:" layoutX="15" layoutY="50" />
+    <TextField fx:id="numVictimsField" layoutX="130" layoutY="45" prefWidth="100" />
+
+    <Label text="Injury Details:" layoutX="15" layoutY="90" />
+    <TextArea fx:id="injuryDetailsField" layoutX="15" layoutY="115" prefWidth="420" prefHeight="120" wrapText="true" />
+
+    <Button text="Submit Report" layoutX="15" layoutY="250" prefWidth="180" onAction="#handleSubmitReport" />
+
+    <Label fx:id="statusMessage" layoutX="210" layoutY="250" prefWidth="225" textFill="red" wrapText="true" />
 </AnchorPane>

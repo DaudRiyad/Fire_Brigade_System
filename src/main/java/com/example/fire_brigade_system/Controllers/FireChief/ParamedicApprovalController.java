@@ -1,21 +1,30 @@
 package com.example.fire_brigade_system.Controllers.FireChief;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 
-public class ParamedicApprovalController
-{
-    @javafx.fxml.FXML
+public class ParamedicApprovalController {
+
+    @FXML
     private CheckBox approveBox;
-    @javafx.fxml.FXML
+
+    @FXML
     private Label messageLabel;
 
-    @javafx.fxml.FXML
+    @FXML
     public void initialize() {
+        // Initialization logic if needed
+        messageLabel.setText("");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void handleApprove(ActionEvent actionEvent) {
+        if (approveBox.isSelected()) {
+            messageLabel.setText("Paramedic deployment approved.");
+        } else {
+            messageLabel.setText("Please check the box to approve paramedic deployment.");
+        }
     }
 }

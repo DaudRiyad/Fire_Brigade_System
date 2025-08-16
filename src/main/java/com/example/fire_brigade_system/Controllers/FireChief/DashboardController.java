@@ -1,38 +1,58 @@
 package com.example.fire_brigade_system.Controllers.FireChief;
 
+
+import com.example.fire_brigade_system.utils.SceneUtil;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 
-public class DashboardController
-{
-    @javafx.fxml.FXML
+public class DashboardController {
+
+    @FXML
     public void initialize() {
+        // Initialization code if needed
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void handleMutualAid(ActionEvent actionEvent) {
+        loadScene(actionEvent, "/com/example/fire_brigade_system/fire_chief/mutual_aid.fxml");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void handleParamedicApproval(ActionEvent actionEvent) {
+        loadScene(actionEvent, "/com/example/fire_brigade_system/fire_chief/paramedic_approval.fxml");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void handleActiveIncidents(ActionEvent actionEvent) {
+        loadScene(actionEvent, "/com/example/fire_brigade_system/fire_chief/active_incidents.fxml");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void handleIncidentLogs(ActionEvent actionEvent) {
+        loadScene(actionEvent, "/com/example/fire_brigade_system/fire_chief/incident_logs.fxml");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void handleCommandCenter(ActionEvent actionEvent) {
+        loadScene(actionEvent, "/com/example/fire_brigade_system/fire_chief/command_center.fxml");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void handleResponseStrategy(ActionEvent actionEvent) {
+        loadScene(actionEvent, "/com/example/fire_brigade_system/fire_chief/response_strategy.fxml");
     }
 
-    @javafx.fxml.FXML
+    @FXML
     public void handleIncidentEvaluation(ActionEvent actionEvent) {
+        loadScene(actionEvent, "/com/example/fire_brigade_system/fire_chief/incident_evaluation.fxml");
+    }
+
+    private void loadScene(ActionEvent event, String fxmlFilePath) {
+        try {
+            SceneUtil.switchScene(event, fxmlFilePath);
+        } catch (Exception e) {
+
+            e.printStackTrace();
+        }
     }
 }

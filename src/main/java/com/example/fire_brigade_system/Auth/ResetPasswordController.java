@@ -1,14 +1,11 @@
 package com.example.fire_brigade_system.Auth;
 
+import com.example.fire_brigade_system.utils.SceneUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
-import javafx.stage.Stage;
-import javafx.scene.Node;
+
 
 public class ResetPasswordController {
     @FXML
@@ -59,13 +56,10 @@ public class ResetPasswordController {
     // Helper to load login.fxml and return to the login screen
     private void goToLogin(ActionEvent actionEvent) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/com/example/fire_brigade_system/auth/login.fxml"));
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
+            SceneUtil.switchScene(actionEvent, "/com/example/fire_brigade_system/Auth/login.fxml");
         } catch (Exception e) {
-            messageLabel.setText("Can't load login page.");
             e.printStackTrace();
+            messageLabel.setText("Can't load forgot password page.");
         }
     }
 }
