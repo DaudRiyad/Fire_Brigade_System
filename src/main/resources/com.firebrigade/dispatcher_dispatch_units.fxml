@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.firebrigade.DispatcherDispatchUnitsFXMLController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.DispatcherDispatchUnitsController">
    <children>
-      <ComboBox fx:id="teucksCB" layoutX="150.0" layoutY="66.0" prefWidth="150.0" promptText="select Trucks" />
-      <ComboBox fx:id="toolsCB" layoutX="150.0" layoutY="118.0" prefWidth="150.0" promptText="select tools" />
-      <ComboBox fx:id="selectTeamsCB" layoutX="150.0" layoutY="175.0" prefWidth="150.0" promptText="select teams" />
-      <Button layoutX="163.0" layoutY="233.0" mnemonicParsing="false" onAction="#dispatchOA" text="dispatch" />
-      <Button layoutX="163.0" layoutY="281.0" mnemonicParsing="false" onAction="#backOA" text="back" />
-      <Label layoutX="70.0" layoutY="14.0" text="Dispatch Units" />
+      <Label layoutX="20" layoutY="20" text="Select Truck:" />
+      <ComboBox fx:id="cmbTrucks" layoutX="120" layoutY="20" />
+
+      <Label layoutX="20" layoutY="60" text="Select Team:" />
+      <ComboBox fx:id="cmbTeams" layoutX="120" layoutY="60" />
+
+      <Label layoutX="20" layoutY="100" text="Tools:" />
+      <ComboBox fx:id="cmbTools" layoutX="120" layoutY="100" />
+
+      <Button fx:id="btnDispatch" layoutX="120" layoutY="140" text="Dispatch" onAction="handleDispatchOA"/>
    </children>
 </AnchorPane>

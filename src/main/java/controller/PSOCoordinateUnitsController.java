@@ -2,6 +2,12 @@ package controller;
 
 public class PSOCoordinateUnitsController {
     PSOCoordinateUnitsController = String location, time
+    @javafx.fxml.FXML
+    private TextField txtMessage;
+    @javafx.fxml.FXML
+    private ComboBox cmbUnit;
+    @javafx.fxml.FXML
+    private Button btnSend;
 
     public String getTime() {
         return time;
@@ -30,5 +36,9 @@ public class PSOCoordinateUnitsController {
                 "location='" + location + '\'' +
                 ", time='" + time + '\'' +
                 '}';
+    }
+
+    @javafx.fxml.FXML
+    public void handleSendOA(ActionEvent actionEvent) {
     }
 }

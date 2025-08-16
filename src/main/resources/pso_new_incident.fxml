@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.PSONewIncidentController">
+    <children>
+        <Label layoutX="20" layoutY="20" text="Location:" />
+        <TextField fx:id="txtLocation" layoutX="100" layoutY="20" />
+
+        <Label layoutX="20" layoutY="60" text="Description:" />
+        <TextArea fx:id="txtDescription" layoutX="100" layoutY="60" prefHeight="100" prefWidth="200" />
+
+        <Button fx:id="btnSubmit" layoutX="100" layoutY="180" text="Submit" onAction="handleSubmitOA"/>
+    </children>
+</AnchorPane>

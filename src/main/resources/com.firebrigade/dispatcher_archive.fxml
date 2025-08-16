@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.DispatcherArchiveController">
+    <children>
+        <Label layoutX="20" layoutY="20" text="Resolved Incidents" />
+        <ListView fx:id="listResolved" layoutX="20" layoutY="50" prefHeight="200" prefWidth="300" />
+        <Button fx:id="btnArchive" layoutX="20" layoutY="260" text="Archive" onAction="handleArchiveOA"/>
+    </children>
+</AnchorPane>

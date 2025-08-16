@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.PSOValidateReportsController">
+    <children>
+        <Label layoutX="20" layoutY="20" text="Caller Reports" />
+        <ListView fx:id="listReports" layoutX="20" layoutY="50" prefHeight="200" prefWidth="300" />
+        <Button fx:id="btnValid" layoutX="20" layoutY="260" text="Mark as Valid" onAction="handleValidOA"/>
+        <Button fx:id="btnFalse" layoutX="120" layoutY="260" text="False Alarm" onAction="handleFalseOA"/>
+    </children>
+</AnchorPane>

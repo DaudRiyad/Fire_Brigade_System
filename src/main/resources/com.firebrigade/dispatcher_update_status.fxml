@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-      spacing="10" alignment="CENTER">
-    <Label text="Update Incident Status"/>
-    <ComboBox promptText="Select Incident"/>
-    <ComboBox promptText="New Status"/>
-    <Button text="Save"/>
-    <Button text="Back"/>
-</VBox>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.DispatcherStatusController">
+    <children>
+        <Label layoutX="20" layoutY="20" text="Select Incident:" />
+        <ComboBox fx:id="cmbIncident" layoutX="140" layoutY="20" />
+
+        <Label layoutX="20" layoutY="60" text="New Status:" />
+        <ComboBox fx:id="cmbStatus" layoutX="140" layoutY="60" />
+
+        <Button fx:id="btnSave" layoutX="140" layoutY="100" text="Save" onAction="handleSaveOA"/>
+    </children>
+</AnchorPane>
