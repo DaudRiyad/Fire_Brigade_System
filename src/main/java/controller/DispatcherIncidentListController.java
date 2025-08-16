@@ -1,13 +1,21 @@
 package controller;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
 public class DispatcherIncidentListController
 {
+
     @javafx.fxml.FXML
-    private ListView listIncidents;
-    @javafx.fxml.FXML
-    private Button btnBack;
-    @javafx.fxml.FXML
-    private Button btnViewReport;
+    private ListView listIncidentsLV;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -17,7 +25,18 @@ public class DispatcherIncidentListController
     public void handleViewReportOA(ActionEvent actionEvent) {
     }
 
+
+
     @javafx.fxml.FXML
-    public void handleBackOA(ActionEvent actionEvent) {
+    public void backOA(ActionEvent actionEvent) throws IOException {
+        Parent root = null ;
+        FXMLLoader fxmlLoader = new FXMLLoader(com.example.demo.HelloApplication.class.getResource("dispatcher_Dashboardfxml"));
+        root = fxmlLoader.load();
+
+        Scene scene = new Scene(root) ;
+        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Dashboard");
+        stage.show();
     }
 }

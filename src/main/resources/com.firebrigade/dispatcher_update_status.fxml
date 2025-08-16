@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.DispatcherStatusController">
+<AnchorPane prefHeight="252.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DispatcherStatusController">
     <children>
         <Label layoutX="20" layoutY="20" text="Select Incident:" />
-        <ComboBox fx:id="cmbIncident" layoutX="140" layoutY="20" />
+        <ComboBox fx:id="incidentCB" layoutX="140" layoutY="20" />
 
         <Label layoutX="20" layoutY="60" text="New Status:" />
-        <ComboBox fx:id="cmbStatus" layoutX="140" layoutY="60" />
+        <ComboBox fx:id="StatusCB" layoutX="140" layoutY="60" />
 
-        <Button fx:id="btnSave" layoutX="140" layoutY="100" text="Save" onAction="handleSaveOA"/>
+        <Button layoutX="143.0" layoutY="106.0" onAction="handleSaveOA" text="Save" />
+      <Button layoutX="138.0" layoutY="159.0" mnemonicParsing="false" onAction="#backOA" text="Back to Dashboard" />
     </children>
 </AnchorPane>

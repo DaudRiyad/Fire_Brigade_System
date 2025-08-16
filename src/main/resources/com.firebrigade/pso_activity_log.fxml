@@ -5,10 +5,11 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="343.0" prefWidth="370.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.PSOActivityLogController">
+<AnchorPane prefHeight="343.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PSOActivityLogController">
     <children>
         <Label layoutX="20" layoutY="20" text="Activity Log" />
-        <TextArea fx:id="txtActivity" layoutX="20" layoutY="50" prefHeight="100" prefWidth="200" />
+        <TextArea fx:id="activityLogTA" layoutX="20" layoutY="50" prefHeight="100" prefWidth="200" />
         <Button layoutX="20" layoutY="160" onAction="handleSaveOA" text="Save" />
+      <Button layoutX="25.0" layoutY="218.0" mnemonicParsing="false" onAction="#backOA" text="Back to Dashboard" />
     </children>
 </AnchorPane>

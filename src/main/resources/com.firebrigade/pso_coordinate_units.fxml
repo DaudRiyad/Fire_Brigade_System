@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.PSOCoordinateUnitsController">
+<AnchorPane prefHeight="427.0" prefWidth="504.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.PSOCoordinateUnitsController">
     <children>
         <Label layoutX="20" layoutY="20" text="Select Unit:" />
-        <ComboBox fx:id="cmbUnit" layoutX="120" layoutY="20" />
+        <ComboBox fx:id="unitCB" layoutX="120" layoutY="20" />
 
         <Label layoutX="20" layoutY="60" text="Message:" />
-        <TextField fx:id="txtMessage" layoutX="120" layoutY="60" />
+        <TextField fx:id="messageTF" layoutX="120" layoutY="60" />
 
-        <Button fx:id="btnSend" layoutX="120" layoutY="100" text="Send" onAction="handleSendOA"/>
+        <Button layoutX="120" layoutY="100" onAction="handleSendOA" text="Send" />
+      <Button layoutX="35.0" layoutY="330.0" mnemonicParsing="false" onAction="#backOA" text="Back to Dashboard" />
     </children>
 </AnchorPane>

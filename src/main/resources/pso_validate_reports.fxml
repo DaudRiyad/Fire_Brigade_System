@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.PSOValidateReportsController">
+<AnchorPane prefHeight="446.0" prefWidth="490.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.PSOValidateReportsController">
     <children>
         <Label layoutX="20" layoutY="20" text="Caller Reports" />
-        <ListView fx:id="listReports" layoutX="20" layoutY="50" prefHeight="200" prefWidth="300" />
-        <Button fx:id="btnValid" layoutX="20" layoutY="260" text="Mark as Valid" onAction="handleValidOA"/>
-        <Button fx:id="btnFalse" layoutX="120" layoutY="260" text="False Alarm" onAction="handleFalseOA"/>
+        <ListView fx:id="listReportsLV" layoutX="20" layoutY="50" prefHeight="200" prefWidth="300" />
+        <Button layoutX="20" layoutY="260" onAction="handleValidOA" text="Mark as Valid" />
+        <Button layoutX="120" layoutY="260" onAction="handleFalseOA" text="False Alarm" />
+      <Button layoutX="293.0" layoutY="319.0" mnemonicParsing="false" onAction="#backOA" text="Back" />
     </children>
 </AnchorPane>

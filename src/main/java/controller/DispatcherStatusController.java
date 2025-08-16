@@ -5,27 +5,24 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ListView;
+import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class PSOValidateReportsController
+public class DispatcherStatusController
 {
-
     @javafx.fxml.FXML
-    private ListView listReportsLV;
+    private ComboBox incidentCB;
+    @javafx.fxml.FXML
+    private ComboBox StatusCB;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void handleValidOA(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void handleFalseOA(ActionEvent actionEvent) {
+    public void handleSaveOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
