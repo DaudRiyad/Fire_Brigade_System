@@ -1,4 +1,4 @@
-package com.example.fire_brigade_system;
+package com.example.demo;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

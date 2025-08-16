@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      spacing="10" alignment="CENTER">
+    <Label text="Communicate with Units"/>
+    <ComboBox promptText="Select Unit"/>
+    <TextArea promptText="Type Message"/>
+    <Button text="Send"/>
+    <Button text="Back"/>
+</VBox>

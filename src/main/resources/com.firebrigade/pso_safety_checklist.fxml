@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.PSOSafetyChecklistController">
+    <children>
+        <Label layoutX="20" layoutY="20" text="Safety Checklist" />
+        <CheckBox fx:id="chkCrowdControl" layoutX="20" layoutY="50" text="Crowd Control Done" />
+        <CheckBox fx:id="chkGasLeak" layoutX="20" layoutY="80" text="Gas Leak Checked" />
+        <Button fx:id="btnSubmit" layoutX="20" layoutY="120" text="Submit" onAction="handleSubmitOA"/>
+    </children>
+</AnchorPane>

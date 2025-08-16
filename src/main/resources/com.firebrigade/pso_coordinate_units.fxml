@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.PSOCoordinateUnitsController">
+    <children>
+        <Label layoutX="20" layoutY="20" text="Select Unit:" />
+        <ComboBox fx:id="cmbUnit" layoutX="120" layoutY="20" />
+
+        <Label layoutX="20" layoutY="60" text="Message:" />
+        <TextField fx:id="txtMessage" layoutX="120" layoutY="60" />
+
+        <Button fx:id="btnSend" layoutX="120" layoutY="100" text="Send" onAction="handleSendOA"/>
+    </children>
+</AnchorPane>
