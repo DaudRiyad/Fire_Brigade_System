@@ -6,19 +6,22 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade_system.IncidentCommander.DebriefTeamPostIncidentController">
     <children>
-        <Label layoutX="229.0" layoutY="33.0" text="Incident Debrief Panel" />
+        <Label layoutX="194.0" layoutY="14.0" text="Incident Debrief Panel">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font></Label>
         <Label layoutX="47.0" layoutY="82.0" prefHeight="17.0" prefWidth="91.0" text="Select Incident:" />
         <Label layoutX="43.0" layoutY="126.0" text="Key Takeaways:" />
         <Label layoutX="44.0" layoutY="175.0" text="Challenges:" />
         <Label layoutX="43.0" layoutY="223.0" text="Suggestions:" />
         <Button layoutX="367.0" layoutY="361.0" mnemonicParsing="false" onAction="#submitDebrifeOnAction" text="Submit Debrief" />
-        <Button layoutX="509.0" layoutY="361.0" mnemonicParsing="false" text="Button" />
-        <ComboBox layoutX="154.0" layoutY="79.0" prefWidth="150.0" />
-        <TextField layoutX="164.0" layoutY="123.0" />
-        <TextField layoutX="164.0" layoutY="171.0" />
-        <TextArea layoutX="44.0" layoutY="260.0" prefHeight="101.0" prefWidth="213.0" wrapText="true" />
+        <ComboBox fx:id="incidentIDCB" layoutX="154.0" layoutY="79.0" prefWidth="150.0" />
+        <TextField fx:id="takewaysTF" layoutX="164.0" layoutY="123.0" />
+        <TextField fx:id="challengesTF" layoutX="164.0" layoutY="171.0" />
+        <TextArea fx:id="suggestionTA" layoutX="44.0" layoutY="260.0" prefHeight="101.0" prefWidth="213.0" wrapText="true" />
     </children>
 </AnchorPane>

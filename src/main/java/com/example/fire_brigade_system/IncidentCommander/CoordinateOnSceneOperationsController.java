@@ -1,5 +1,6 @@
 package com.example.fire_brigade_system.IncidentCommander;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 
 public class CoordinateOnSceneOperationsController
@@ -13,12 +14,15 @@ public class CoordinateOnSceneOperationsController
     String liveupdate;
     @javafx.fxml.FXML
     public void initialize() {
-        //liveupdate = liveUPFieldsTextArea.setText();
+        liveUPFieldsTextArea.setText("Need BackUp");
     }
 
     @javafx.fxml.FXML
     public void sendCommandOnAction(ActionEvent actionEvent) {
         String command = sendCommandTextArea.getText();
-        //fireFighterOPLabel.settex(command);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Debrief ");
+        alert.setContentText(command);
+        alert.showAndWait();
     }
 }
