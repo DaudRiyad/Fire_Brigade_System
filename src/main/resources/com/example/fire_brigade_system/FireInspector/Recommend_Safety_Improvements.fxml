@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade_system.FireInspector.RecommendSafetyImprovementsController">
+    <children>
+        <Label layoutX="170.0" layoutY="14.0" text=" Safety Improvement Suggestions">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="259.0" text="Recomendation" />
+        <TextArea fx:id="recomandationTA" layoutX="137.0" layoutY="216.0" prefHeight="85.0" prefWidth="241.0" wrapText="true" />
+        <Label layoutX="26.0" layoutY="328.0" text="Improvement List:" />
+        <ComboBox fx:id="improvementListCB" layoutX="137.0" layoutY="324.0" prefWidth="150.0" />
+        <Button layoutX="313.0" layoutY="361.0" mnemonicParsing="false" onAction="#submitRecommaendation" text="Submit Recommendations" />
+        <Label layoutX="20.0" layoutY="64.0" text="Incident Id :" />
+        <Label layoutX="20.0" layoutY="104.0" prefHeight="17.0" prefWidth="49.0" text="Type " />
+        <Label layoutX="20.0" layoutY="135.0" text="Location " />
+        <Label fx:id="locationlabel" layoutX="137.0" layoutY="131.0" prefHeight="25.0" prefWidth="150.0" text="Label" />
+        <Label fx:id="typeLabel" layoutX="137.0" layoutY="100.0" prefHeight="25.0" prefWidth="150.0" text="Label" />
+        <ComboBox fx:id="idComboBox" layoutX="137.0" layoutY="60.0" onAction="#incidentIdOA" prefWidth="150.0" />
+        <Label layoutX="14.0" layoutY="175.0" prefHeight="25.0" prefWidth="84.0" text="Severty Label :" />
+        <ComboBox fx:id="severtyLabelCB" layoutX="137.0" layoutY="175.0" prefWidth="150.0" />
+        <Label fx:id="safetyOutputLabel" layoutX="395.0" layoutY="73.0" prefHeight="107.0" prefWidth="193.0" text="Label" wrapText="true" />
+    </children>
+</AnchorPane>

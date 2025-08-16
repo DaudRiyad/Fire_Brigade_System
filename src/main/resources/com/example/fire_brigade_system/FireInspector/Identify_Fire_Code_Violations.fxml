@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade_system.FireInspector.IdentifyFireCodeViolationsController">
+    <children>
+        <Label layoutX="180.0" layoutY="14.0" text="Fire Code Violation Report">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="17.0" layoutY="79.0" text="Violation Checklist:" />
+        <Label layoutX="17.0" layoutY="153.0" text="Severity Rating:" />
+        <Label layoutX="16.0" layoutY="200.0" text="Recommended Actions:" />
+        <ComboBox fx:id="severtyRatingCB" layoutX="120.0" layoutY="149.0" prefWidth="150.0" />
+        <CheckBox fx:id="violation1CkB" layoutX="135.0" layoutY="79.0" mnemonicParsing="false" text="blocked exits" />
+        <CheckBox fx:id="violation2CkB" layoutX="236.0" layoutY="79.0" mnemonicParsing="false" text="faulty alarms" />
+        <CheckBox fx:id="violation3CkB" layoutX="136.0" layoutY="116.0" mnemonicParsing="false" text="Expired Extinguish" />
+        <TextArea fx:id="recomandetationTA" layoutX="17.0" layoutY="231.0" prefHeight="79.0" prefWidth="200.0" />
+        <Button layoutX="139.0" layoutY="353.0" mnemonicParsing="false" onAction="#generateVReportOA" text="Generate Violation Report" />
+        <TextArea fx:id="violationTA" layoutX="357.0" layoutY="116.0" prefHeight="161.0" prefWidth="200.0" />
+        <Label layoutX="401.0" layoutY="86.0" text="Violation Report ">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
