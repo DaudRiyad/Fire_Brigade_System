@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="393.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade_system.Auth.signupController">
+
+    <Label layoutX="145.0" layoutY="21.0" style="-fx-font-size:18px;" text="Create Account" />
+    <TextField fx:id="userIdField" layoutX="62.0" layoutY="61.0" prefHeight="25.0" prefWidth="135.0" promptText="User ID (6 digits)" />
+    <PasswordField fx:id="passwordField" layoutX="261.0" layoutY="61.0" prefHeight="25.0" prefWidth="148.0" promptText="Password (min 6 chars)" />
+    <PasswordField fx:id="confirmPasswordField" layoutX="261.0" layoutY="94.0" prefHeight="25.0" prefWidth="148.0" promptText="Confirm Password" />
+    <TextField fx:id="phoneField" layoutX="128.0" layoutY="139.0" prefWidth="200" promptText="Phone Number" />
+    <Label fx:id="messageLabel" layoutX="50" layoutY="215" prefWidth="200" textFill="red" />
+
+    <Button layoutX="117.0" layoutY="250.0" onAction="#handleRegister" prefWidth="80" text="Sign Up" />
+    <Button layoutX="250.0" layoutY="250.0" onAction="#handleBackToLogin" prefHeight="25.0" prefWidth="89.0" text="Back to Login" />
+   <ComboBox fx:id="roleCombobox" layoutX="62.0" layoutY="94.0" prefHeight="25.0" prefWidth="135.0" promptText="Role" />
+
+</AnchorPane>

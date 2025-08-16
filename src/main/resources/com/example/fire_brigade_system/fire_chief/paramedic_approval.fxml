@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.fire_brigade_system.Controllers.FireChief.ParamedicApprovalController" prefWidth="340" prefHeight="150">
+    <children>
+        <Label layoutX="30" layoutY="20" text="Paramedic Approval"/>
+        <CheckBox fx:id="approveBox" layoutX="30" layoutY="50" text="Send Paramedics?"/>
+        <Button layoutX="30" layoutY="90" text="Approve" onAction="#handleApprove"/>
+        <Label fx:id="messageLabel" layoutX="120" layoutY="90"/>
+    </children>
+</AnchorPane>

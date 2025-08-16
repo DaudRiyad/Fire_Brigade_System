@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fire_brigade_system.Controllers.Paramedic.TimeLogController"
+            prefWidth="350" prefHeight="220">
+
+    <Label text="Arrival and Departure Time Log" layoutX="15" layoutY="15" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+
+    <Label text="Time of Arrival (HH:mm):" layoutX="15" layoutY="60"/>
+    <TextField fx:id="arrivalTimeField" layoutX="180" layoutY="55" prefWidth="140"/>
+
+    <Label text="Time of Departure (HH:mm):" layoutX="15" layoutY="100"/>
+    <TextField fx:id="departureTimeField" layoutX="180" layoutY="95" prefWidth="140"/>
+
+    <Button text="Submit Time Log" layoutX="15" layoutY="145" prefWidth="140" onAction="#handleSubmitTimeLog" />
+    <Button text="Cancel" layoutX="190" layoutY="145" prefWidth="140" onAction="#handleCancel" />
+
+    <Label fx:id="statusMessage" layoutX="15" layoutY="185" prefWidth="310" textFill="red" wrapText="true" />
+</AnchorPane>

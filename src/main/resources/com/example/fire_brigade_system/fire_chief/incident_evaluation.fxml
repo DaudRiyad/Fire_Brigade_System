@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.fire_brigade_system.Controllers.FireChief.IncidentEvaluationController" prefWidth="400" prefHeight="220">
+    <children>
+        <Label layoutX="30" layoutY="20" text="Incident Evaluation"/>
+        <ComboBox fx:id="incidentComboBox" layoutX="30" layoutY="60" prefWidth="200" promptText="Select Incident"/>
+        <TextArea fx:id="detailsArea" layoutX="30" layoutY="100" prefWidth="320" prefHeight="60" promptText="Incident Details"/>
+        <Button layoutX="30" layoutY="180" text="Return" onAction="#handleReturn"/>
+    </children>
+</AnchorPane>
