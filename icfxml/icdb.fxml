@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="incidentCommanderDaxhboardBP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade.IncidentCommander.IncidentCommanderDashboardController">
+   <left>
+      <VBox prefWidth="200.0" style="-fx-background-color: rgba(100,100,100,20);" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#assessIncidentSevertyOA" prefWidth="200.0" text="Assess Incident Severity">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#allocateResourcesOA" prefWidth="200.0" text="Allocate Resources">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#coordinateOnSceneOperationOA" prefWidth="200.0" text="Coordinate On-Scene Operations">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#escalateCriticalSituationsOA" prefWidth="200.0" text="Escalate Critical Situations">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="85.0" mnemonicParsing="false" onAction="#approveIncidentClosureOA" prefWidth="200.0" text="Approve Incident Closure">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#debriefTeamPostIncidentOA" prefHeight="25.0" prefWidth="203.0" text="Debrief Team Post-Incident">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#updateIncidentDocumentationOA" prefWidth="200.0" text="Update Incident Documentation">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#monitorWeatherHazardsAlertsOA" prefWidth="200.0" text=" Monitor Weather/Hazard Alerts">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="185.0" mnemonicParsing="false" onAction="#signOutOA" prefWidth="200.0" text="Sign Out">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <MenuBar prefHeight="34.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="255.0" layoutY="21.0" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="icInfoTextArea" layoutX="94.0" layoutY="91.0" prefHeight="285.0" prefWidth="460.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
