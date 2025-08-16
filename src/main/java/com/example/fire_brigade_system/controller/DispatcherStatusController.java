@@ -1,20 +1,21 @@
-package controller;
+package com.example.fire_brigade_system.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class PSOActivityLogController
+public class DispatcherStatusController
 {
-
     @javafx.fxml.FXML
-    private TextArea activityLogTA;
+    private ComboBox incidentCB;
+    @javafx.fxml.FXML
+    private ComboBox StatusCB;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -27,7 +28,7 @@ public class PSOActivityLogController
     @javafx.fxml.FXML
     public void backOA(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(com.example.demo.HelloApplication.class.getResource("pso_Dashboardfxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(com.example.demo.HelloApplication.class.getResource("dispatcher_Dashboardfxml"));
         root = fxmlLoader.load();
 
         Scene scene = new Scene(root) ;

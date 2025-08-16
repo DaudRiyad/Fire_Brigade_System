@@ -1,11 +1,10 @@
-package controller;
+package com.example.fire_brigade_system.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -55,7 +54,7 @@ public class PSOCoordinateUnitsController {
     @javafx.fxml.FXML
     public void backOA(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(com.example.demo.HelloApplication.class.getResource("pso_Dashboardfxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(com.example.demo.HelloApplication.class.getResource("pso_Dashboard.fxml"));
         root = fxmlLoader.load();
 
         Scene scene = new Scene(root) ;

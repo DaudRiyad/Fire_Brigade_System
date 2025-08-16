@@ -5,7 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="475.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PSOSafetyChecklistController">
+<AnchorPane prefHeight="475.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade_system.controller.PSOSafetyChecklistController">
     <children>
         <Label layoutX="20" layoutY="20" text="Safety Checklist" />
         <CheckBox fx:id="crowdControlCHB" layoutX="20" layoutY="50" text="Crowd Control Done" />

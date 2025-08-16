@@ -1,28 +1,31 @@
-package controller;
+package com.example.fire_brigade_system.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class DispatcherStatusController
+public class PSOValidateReportsController
 {
+
     @javafx.fxml.FXML
-    private ComboBox incidentCB;
-    @javafx.fxml.FXML
-    private ComboBox StatusCB;
+    private ListView listReportsLV;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void handleSaveOA(ActionEvent actionEvent) {
+    public void handleValidOA(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleFalseOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

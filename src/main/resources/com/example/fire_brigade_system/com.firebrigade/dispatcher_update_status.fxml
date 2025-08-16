@@ -5,7 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="252.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DispatcherStatusController">
+<AnchorPane prefHeight="252.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade_system.controller.DispatcherStatusController">
     <children>
         <Label layoutX="20" layoutY="20" text="Select Incident:" />
         <ComboBox fx:id="incidentCB" layoutX="140" layoutY="20" />

@@ -1,37 +1,33 @@
-package controller;
+package com.example.fire_brigade_system.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class PSOValidateReportsController
+public class PSOActivityLogController
 {
 
     @javafx.fxml.FXML
-    private ListView listReportsLV;
+    private TextArea activityLogTA;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
 
     @javafx.fxml.FXML
-    public void handleValidOA(ActionEvent actionEvent) {
-    }
-
-    @javafx.fxml.FXML
-    public void handleFalseOA(ActionEvent actionEvent) {
+    public void handleSaveOA(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void backOA(ActionEvent actionEvent) throws IOException {
         Parent root = null ;
-        FXMLLoader fxmlLoader = new FXMLLoader(com.example.demo.HelloApplication.class.getResource("dispatcher_Dashboardfxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(com.example.demo.HelloApplication.class.getResource("pso_Dashboardfxml"));
         root = fxmlLoader.load();
 
         Scene scene = new Scene(root) ;

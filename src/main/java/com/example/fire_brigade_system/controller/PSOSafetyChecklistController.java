@@ -1,4 +1,4 @@
-package controller;
+package com.example.fire_brigade_system.controller;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.CheckBox;

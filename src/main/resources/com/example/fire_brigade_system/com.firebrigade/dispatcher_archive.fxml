@@ -5,7 +5,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="358.0" prefWidth="369.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.DispatcherArchiveController">
+<AnchorPane prefHeight="358.0" prefWidth="369.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.fire_brigade_system.controller.DispatcherArchiveController">
     <children>
         <Label layoutX="20" layoutY="20" text="Resolved Incidents" />
         <ListView fx:id="listResolvedLV" layoutX="20" layoutY="50" prefHeight="200" prefWidth="300" />

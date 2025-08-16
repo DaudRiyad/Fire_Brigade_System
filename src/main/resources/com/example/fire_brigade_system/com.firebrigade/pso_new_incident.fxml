@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="424.0" prefWidth="481.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PSONewIncidentController">
+<AnchorPane prefHeight="424.0" prefWidth="481.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade_system.controller.PSONewIncidentController">
     <children>
         <Label layoutX="20" layoutY="20" text="Location:" />
         <TextField fx:id="locationTF" layoutX="100" layoutY="20" />

@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="443.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PSOIncidentSummaryController">
+<AnchorPane prefHeight="443.0" prefWidth="476.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fire_brigade_system.controller.PSOIncidentSummaryController">
     <children>
         <Label layoutX="20" layoutY="20" text="Incident Summary" />
         <TextArea fx:id="summeryTA" layoutX="20" layoutY="50" prefHeight="100" prefWidth="250" />
